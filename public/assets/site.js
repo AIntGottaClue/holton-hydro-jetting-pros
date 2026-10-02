@@ -18,7 +18,7 @@ if (menuNav) {
 const neighborhoodLinks = [['Downtown Holton','downtown-holton'],['Circleville','circleville'],['Hoyt','hoyt'],['Whiting','whiting']];
 if (menuNav) {
  const nbArea = document.createElement('div'); nbArea.className = 'navlinks__dropdown';
- const nbTrigger = document.createElement('button'); nbTrigger.type = 'button'; nbTrigger.className = 'navlinks__dropdown-trigger'; nbTrigger.setAttribute('aria-expanded','false'); nbTrigger.setAttribute('aria-controls','neighborhoods-menu'); nbTrigger.innerHTML = 'Nearby towns <span aria-hidden="true">⌄</span>';
+ const nbTrigger = document.createElement('button'); nbTrigger.type = 'button'; nbTrigger.className = 'navlinks__dropdown-trigger'; nbTrigger.setAttribute('aria-expanded','false'); nbTrigger.setAttribute('aria-controls','neighborhoods-menu'); nbTrigger.innerHTML = 'Neighborhoods <span aria-hidden="true">⌄</span>';
  const nbPanel = document.createElement('div'); nbPanel.className = 'navlinks__dropdown-menu'; nbPanel.id = 'neighborhoods-menu';
  const nbBase = new URL('../', document.querySelector('script[src*="/assets/site.js"]').src).pathname;
  neighborhoodLinks.forEach(([name,slug]) => { const a = document.createElement('a'); a.href = nbBase + slug + '/'; a.textContent = name; nbPanel.append(a); });
